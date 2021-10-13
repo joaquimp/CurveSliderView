@@ -35,7 +35,7 @@ public struct CurveSliderView: View {
     
     public init(value: Binding<Double>,
                 minValue: Double = 0,
-                maxValue: Double = 0,
+                maxValue: Double = 100,
                 height: CGFloat = 30,
                 length: CGFloat = 90,
                 lineWidth: CGFloat = 10,
