@@ -24,14 +24,14 @@ enum ValuePrecision: Int {
 @available(macOS 10.15, *)
 public struct CurveSliderView: View {
     @Binding
-    var value: Double
-    var minValue: Double = 0
-    var maxValue: Double = 100
-    var height: CGFloat = 30
-    var length: CGFloat = 90
-    var lineWidth: CGFloat = 10
-    var valuePosition: ValuePosition = .middle
-    var valuePrecision: ValuePrecision = .one
+    public var value: Double
+    public var minValue: Double = 0
+    public var maxValue: Double = 100
+    public var height: CGFloat = 30
+    public var length: CGFloat = 90
+    public var lineWidth: CGFloat = 10
+    public var valuePosition: ValuePosition = .middle
+    public var valuePrecision: ValuePrecision = .one
     
     private func convert(value: Double, width: Double, margin: Double) -> Double {
         return (value - minValue) * (width - margin) / (maxValue - minValue) + margin;
