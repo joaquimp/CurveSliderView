@@ -33,7 +33,23 @@ public struct CurveSliderView: View {
     public var valuePosition: ValuePosition = .middle
     public var valuePrecision: ValuePrecision = .one
     
-    
+    public init(value: Binding<Double>,
+                minValue: Double = 0,
+                maxValue: Double = 0,
+                height: CGFloat = 30,
+                length: CGFloat = 90,
+                lineWidth: CGFloat = 10,
+                valuePosition: ValuePosition = .middle,
+                valuePrecision: ValuePrecision = .one) {
+        self._value = value
+        self.minValue = minValue
+        self.maxValue = maxValue
+        self.height = height
+        self.length = length
+        self.lineWidth = lineWidth
+        self.valuePosition = valuePosition
+        self.valuePrecision = valuePrecision
+    }
     
     private func convert(value: Double, width: Double, margin: Double) -> Double {
         return (value - minValue) * (width - margin) / (maxValue - minValue) + margin;
