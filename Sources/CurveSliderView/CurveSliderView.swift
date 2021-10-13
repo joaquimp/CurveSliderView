@@ -20,8 +20,7 @@ public enum ValuePrecision: Int {
     case two = 2
 }
 
-@available(iOS 13.0, *)
-@available(macOS 10.15, *)
+
 public struct CurveSliderView: View {
     @Binding
     public var value: Double
@@ -128,8 +127,7 @@ public struct CurveSliderView: View {
     }
 }
 
-@available(macOS 10.15, *)
-@available(iOS 13.0.0, *)
+
 struct CurveSliderView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
