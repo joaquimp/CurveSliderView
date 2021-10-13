@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-enum ValuePosition {
+public enum ValuePosition {
     case top
     case middle
     case botton
     case none
 }
 
-enum ValuePrecision: Int {
+public enum ValuePrecision: Int {
     case zero = 0
     case one = 1
     case two = 2
@@ -32,6 +32,8 @@ public struct CurveSliderView: View {
     public var lineWidth: CGFloat = 10
     public var valuePosition: ValuePosition = .middle
     public var valuePrecision: ValuePrecision = .one
+    
+    
     
     private func convert(value: Double, width: Double, margin: Double) -> Double {
         return (value - minValue) * (width - margin) / (maxValue - minValue) + margin;
